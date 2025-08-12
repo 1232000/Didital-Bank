@@ -1,0 +1,18 @@
+/* GENERAL------------------------------------------------------------------------------- */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+body{
+    margin: 0; 
+    font-family: "Public Sans", sans-serif;
+}
+img{
+    display: block;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+section{
+    min-height: 110vh ;
+}
