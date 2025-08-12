@@ -16,3 +16,70 @@ a{
 section{
     min-height: 110vh ;
 }
+.w-220px {
+  width: 220px;
+}
+/* COLORS-------------------------------------------------------------------------------- */
+:root{
+    --Blue-950: rgb(45, 49, 77);
+    --Green-500: rgb(50, 210, 93);
+    --Cyan-400: rgb(44, 182, 216);
+    --Gray-600: rgb(150, 152, 166);
+    --Gray-100: rgb(243, 244, 246);
+    --Gray-50: rgb(250, 250, 250);
+}
+.dark-clr{
+    color: var(--Blue-950);
+}
+/* NAVBAR & FOOTER------------------------------------------------------------------------------- */
+nav{
+    background-color: white;
+}
+.nav-link{
+    color: var(--Gray-600);
+    position: relative;
+    transition: all 0.3s;
+}
+.nav-link:hover{
+    color:  var(--Blue-950);
+}
+.navbar-nav .nav-link.active::after{
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 3px;
+    color: var(--Blue-950);
+    background-image: linear-gradient(17deg , rgb(44, 182, 216) 0%, rgb(50, 210, 93) 100%);
+    top: calc(100% + 15px);
+    left: 10px;
+}
+@media (max-width:768px ) {
+    .navbar-nav .nav-link.active::after{
+        width: 0;
+        height: 0;
+    }
+}
+footer{
+    background-color: var(--Blue-950);
+}
+footer li i , footer span, footer p{
+    align-self: center;
+    color: white;
+    transition: all 0.3s;
+}
+footer span:hover {
+    color: var(--Green-500);
+    cursor: pointer;
+}
+/* BTN-------------------------------------------------------------------------------- */
+.req-btn{
+    width: fit-content;
+    background-image: linear-gradient(17deg , rgb(44, 182, 216) 0%, rgb(50, 210, 93) 100%);
+    color: white;
+    border: 0;
+    transition: all 0.4s;
+}
+.req-btn:hover{
+    background-image: linear-gradient(17deg, rgb(0, 201, 255) 0%, rgb(146, 254, 157) 100%);
+    color: white;
+}

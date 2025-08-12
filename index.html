@@ -6,7 +6,7 @@
     <title>Didital Bank</title>
     <link
       rel="shortcut icon"
-      href="./images/logo-light.svg"
+      href="./images/logo.svg"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./css-style/bootstrap.min.css" />
@@ -28,9 +28,95 @@
     data-bs-offset="0"
     tabindex="0"
   >
+  <!--NAVBAR----------------------------------------------------------------------------------------------->
+    <nav class="navbar navbar-expand-md py-3 shadow-sm fixed-top">
+      <div class="container">
+        <div class="d-flex w-220px">
+          <img class="w-25" src="./images/logo.svg" alt="logo"/>
+          <a class="fw-bold fs-2 dark-clr" href="#">Diditalbank</a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#careers">Careers</a>
+            </li>
+          </ul>
+          <button class="req-btn rounded-5 d-none d-lg-block ms-auto px-4 py-2" href="./html/services.html">Request Invite</button>
+        </div>
+              
+      </div>
+    </nav>
+    
+    <!--HOME----------------------------------------------------------------------------------------------->
+    <section id="home"></section>
+    <!--ABOUT----------------------------------------------------------------------------------------------->
+    <section id="about"></section>
+    <!--CONTACT----------------------------------------------------------------------------------------------->
+    <section id="contact"></section>
+    <!--BLOG----------------------------------------------------------------------------------------------->
+    <section id="blog"></section>
+    <!--CAREERS----------------------------------------------------------------------------------------------->
+    <section id="careers"></section>
+    <!--FOOTER----------------------------------------------------------------------------------------------->
+    <footer class="mb-0 text-center text-md-start py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
+
+            <div class="d-flex w-220px pb-4">
+              <img class="w-25" src="./images/logo.svg" alt="logo"/>
+              <span class="fw-bold fs-2 text-white" href="#">Diditalbank</span>
+            </div>
+            <ul class="list-unstyled text-white gap-3 d-flex">
+              <li><a href="#"><i class="fa-brands fs-4 fa-facebook-square"></i></a></li>
+              <li><a href="#"><i class="fa-brands fs-4 fa-youtube"></i></a></li>
+              <li><a href="#"><i class="fa-brands fs-4 fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa-brands fs-4 fa-pinterest"></i></a></li>
+              <li><a href="#"><i class="fa-brands fs-4 fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="d-flex flex-column justify-content-center col-md-2 gap-3">
+            <span>About Us</span>
+            <span>Contact</span>
+            <span class="pb-3 p-md-0">Blog</span>
+          </div>
+          <div class="d-flex flex-column justify-content-center col-md-2 gap-3">
+            <span>Careers</span>
+            <span>Support</span>
+            <span class="pb-5 p-md-0">Privacy Policy</span>
+          </div>
+          <div class="d-flex flex-column col-md-4 align-items-center justify-content-center">
+            <button class="req-btn rounded-5 px-4 py-2 mb-3" href="./html/services.html">Request Invite</button>
+            <p class="text-white-50">© Digitalbank. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!------------------------------------------------------------------------------------------------->
-
     <script src="./bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
