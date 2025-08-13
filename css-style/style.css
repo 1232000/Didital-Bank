@@ -116,4 +116,20 @@ footer span:hover {
     height: 80vh;
     overflow-x: hidden;
 }
+    .w-md-50{
+        width: 100%;
+    }
+}
+@media (min-width:992px ) {
+    .w-md-50{
+        width: 50%;
+    }
+}
+/* ABOUT------------------------------------------------------------------------------- */
+#about{
+    background-color: var(--Gray-100);
+}
+#about h2{
+    font-weight: 400;
+    font-size: 40px;
 }
