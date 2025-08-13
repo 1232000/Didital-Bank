@@ -84,7 +84,7 @@ footer span:hover {
 #home{
     margin-block: 30px;
     scroll-margin: 70px;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 #home h1{
     font-weight: 400;
@@ -113,8 +113,8 @@ footer span:hover {
         transform: translate(30% ,10%);
 }
     #home{
-    height: 80vh;
-    overflow-x: hidden;
+    min-height: 80vh;
+    /* overflow-x: hidden; */
 }
     .w-md-50{
         width: 100%;
@@ -132,4 +132,32 @@ footer span:hover {
 #about h2{
     font-weight: 400;
     font-size: 40px;
+}
+/* CONTACT------------------------------------------------------------------------------- */
+#contact{
+    background-color: var(--Gray-50);
+}
+#contact h2{
+    font-weight: 400;
+    font-size: 40px;
+}
+.card{
+    border: 0;
+    background-color: transparent;
+}
+.card img{
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s;
+}
+.card-body{
+    background-color: white;
+}
+.card-title{
+    transition:all 0.3s;
+}
+.card-title:hover{
+    color: var(--Green-500);
+    cursor: pointer;
 }
