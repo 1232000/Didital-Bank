@@ -21,69 +21,85 @@ section{
 }
 /* COLORS-------------------------------------------------------------------------------- */
 :root{
-    --Blue-950: rgb(45, 49, 77);
-    --Green-500: rgb(50, 210, 93);
-    --Cyan-400: rgb(44, 182, 216);
-    --Gray-600: rgb(150, 152, 166);
-    --Gray-100: rgb(243, 244, 246);
-    --Gray-50: rgb(250, 250, 250);
+    --main-clr: rgb(45, 49, 77);
+    --footer-clr: rgb(45, 49, 77);
+    --btn-1: rgb(50, 210, 93);
+    --btn-2: rgb(44, 182, 216);
+    --bg-600: rgb(150, 152, 166);
+    --bg-100: rgb(243, 244, 246);
+    --bg-50: rgb(250, 250, 250);
+    --light: white;
+    --icon: white;
 }
+:root[data-bs-theme="dark"] {
+    --main-clr: rgb(255, 255, 255);
+    --footer-clr: #0F172B;
+    --btn-1: rgb(50, 210, 93);
+    --btn-2: rgb(44, 182, 216);
+    --bg-600: rgb(150, 152, 166);
+    --bg-100: #18213a; 
+    --bg-50: #1D293D;
+    --light: #0F172B;
+    --icon: white;
+}
+
 .dark-clr , h1 ,h2 ,h3, h4, h5, h6{
-    color: var(--Blue-950);
+    color: var(--main-clr);
 }
 p{
-    color: var(--Gray-600);
+    color: var(--bg-600);
 }
 /* NAVBAR & FOOTER------------------------------------------------------------------------------- */
 nav{
-    background-color: white;
+    background-color: var(--light);
 }
 .nav-link{
-    color: var(--Gray-600);
+    color: var(--bg-600);
     position: relative;
     transition: all 0.3s;
 }
 .nav-link:hover{
-    color:  var(--Blue-950);
+    color:  var(--main-clr);
 }
 .navbar-nav .nav-link.active::after{
     content: "";
     position: absolute;
     width: 45px;
     height: 3px;
-    color: var(--Blue-950);
+    color: var(--main-clr);
     background-image: linear-gradient(17deg , rgb(44, 182, 216) 0%, rgb(50, 210, 93) 100%);
     top: calc(100% + 15px);
     left: 10px;
 }
 footer{
-    background-color: var(--Blue-950);
+    background-color: var(--footer-clr);
 }
 footer li i , footer span, footer p{
     align-self: center;
-    color: white;
+    color: var(--icon);
     transition: all 0.3s;
 }
 footer span:hover {
-    color: var(--Green-500);
+    color: var(--btn-1);
     cursor: pointer;
 }
 /* BTN-------------------------------------------------------------------------------- */
 .req-btn{
     width: fit-content;
     background-image: linear-gradient(17deg , rgb(44, 182, 216) 0%, rgb(50, 210, 93) 100%);
-    color: white;
+    color: var(--light);
     border: 0;
     transition: all 0.4s;
 }
 .req-btn:hover{
     background-image: linear-gradient(17deg, rgb(0, 201, 255) 0%, rgb(146, 254, 157) 100%);
-    color: white;
+    color: var(--light);
 }
 /* HOME------------------------------------------------------------------------------- */
 #home{
-    margin-block: 30px;
+    /* margin-block: 30px; */
     scroll-margin: 70px;
+    background-color: var(--light);
     /* overflow-x: hidden; */
 }
 #home h1{
@@ -95,6 +111,20 @@ footer span:hover {
 }
 #home .req-btn{
     margin-bottom: 40px;
+}
+.phone-parent{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* overflow: hidden; */
+}
+.phone{
+    background-image: url('../images/image-mockups.png');
+    background-size: cover;
+    background-position:center;
+    width: 800px;
+    height: 800px;
+    transform: translate(30% ,10%);
 }
 @media (max-width:768px ) {
     .navbar-nav .nav-link.active::after{
@@ -113,7 +143,7 @@ footer span:hover {
         transform: translate(30% ,10%);
 }
     #home{
-    min-height: 80vh;
+    /* min-height: 80vh; */
     /* overflow-x: hidden; */
 }
     .w-md-50{
@@ -127,7 +157,7 @@ footer span:hover {
 }
 /* ABOUT------------------------------------------------------------------------------- */
 #about{
-    background-color: var(--Gray-100);
+    background-color: var(--bg-100);
 }
 #about h2{
     font-weight: 400;
@@ -135,7 +165,7 @@ footer span:hover {
 }
 /* CONTACT------------------------------------------------------------------------------- */
 #contact{
-    background-color: var(--Gray-50);
+    background-color: var(--bg-50);
 }
 #contact h2{
     font-weight: 400;
@@ -152,12 +182,113 @@ footer span:hover {
     transition: all 0.3s;
 }
 .card-body{
-    background-color: white;
+    background-color: var(--light);
 }
 .card-title{
     transition:all 0.3s;
 }
 .card-title:hover{
-    color: var(--Green-500);
+    color: var(--btn-1);
     cursor: pointer;
+}
+/* TOOGLE-------------------------------------------------------------------------------*/
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 30px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+/* .switch:hover */.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+ 
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+ 
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(34px);
 }
