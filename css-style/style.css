@@ -5,6 +5,7 @@
 body{
     margin: 0; 
     font-family: "Public Sans", sans-serif;
+    overflow-x: hidden;
 }
 img{
     display: block;
@@ -14,6 +15,7 @@ a{
     text-decoration: none;
 }
 section{
+    width: 100%;
     min-height: 100vh ;
 }
 .w-220px {
@@ -97,10 +99,8 @@ footer span:hover {
 }
 /* HOME------------------------------------------------------------------------------- */
 #home{
-    /* margin-block: 30px; */
     scroll-margin: 70px;
     background-color: var(--light);
-    /* overflow-x: hidden; */
 }
 #home h1{
     font-weight: 400;
@@ -111,20 +111,6 @@ footer span:hover {
 }
 #home .req-btn{
     margin-bottom: 40px;
-}
-.phone-parent{
-    position: absolute;
-    top: 0;
-    right: 0;
-    /* overflow: hidden; */
-}
-.phone{
-    background-image: url('../images/image-mockups.png');
-    background-size: cover;
-    background-position:center;
-    width: 800px;
-    height: 800px;
-    transform: translate(30% ,10%);
 }
 @media (max-width:768px ) {
     .navbar-nav .nav-link.active::after{
@@ -141,10 +127,6 @@ footer span:hover {
 }
     .-translate-5{
         transform: translate(30% ,10%);
-}
-    #home{
-    /* min-height: 80vh; */
-    /* overflow-x: hidden; */
 }
     .w-md-50{
         width: 100%;
